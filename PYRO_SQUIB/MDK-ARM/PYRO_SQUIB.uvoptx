@@ -77,20 +77,25 @@
         <tvExpOptDlg>0</tvExpOptDlg>
         <IsCurrentTarget>1</IsCurrentTarget>
       </OPTFL>
-      <CpuCode>0</CpuCode>
+      <CpuCode>18</CpuCode>
       <Books>
         <Book>
           <Number>0</Number>
-          <Title>Schematics (MCBSTM32F200)</Title>
-          <Path>D:\Programs\Keil\ARM\PACK\Keil\STM32F2xx_DFP\2.6.0\MDK\Boards\Keil\MCBSTM32F200\Documentation\mcbstm32f200-schematics.pdf</Path>
+          <Title>Schematics V1.1 (MCBSTM32F200)</Title>
+          <Path>C:\Program Files\Keil\ARM\PACK\Keil\STM32F2xx_DFP\2.7.0\MDK\Boards\Keil\MCBSTM32F200\Documentation\mcbstm32f200-schematics.pdf</Path>
         </Book>
         <Book>
           <Number>1</Number>
-          <Title>User Manual (MCBSTM32F200)</Title>
-          <Path>D:\Programs\Keil\ARM\PACK\Keil\STM32F2xx_DFP\2.6.0\MDK\Boards\Keil\MCBSTM32F200\Documentation\mcbstm32f200.chm</Path>
+          <Title>Schematics V1.2 (MCBSTM32F200)</Title>
+          <Path>C:\Program Files\Keil\ARM\PACK\Keil\STM32F2xx_DFP\2.7.0\MDK\Boards\Keil\MCBSTM32F200\Documentation\mcbstm32f200-schematics_V1.2.pdf</Path>
         </Book>
         <Book>
           <Number>2</Number>
+          <Title>User Manual (MCBSTM32F200)</Title>
+          <Path>C:\Program Files\Keil\ARM\PACK\Keil\STM32F2xx_DFP\2.7.0\MDK\Boards\Keil\MCBSTM32F200\Documentation\mcbstm32f200.chm</Path>
+        </Book>
+        <Book>
+          <Number>3</Number>
           <Title>MCBSTM32F200 Evaluation Board Web Page (MCBSTM32F200)</Title>
           <Path>http://www.keil.com/mcbstm32f200/</Path>
         </Book>
@@ -133,6 +138,26 @@
       <TargetDriverDllRegistry>
         <SetRegEntry>
           <Number>0</Number>
+          <Key>ARMRTXEVENTFLAGS</Key>
+          <Name>-L70 -Z18 -C0 -M0 -T1</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
+          <Key>DLGTARM</Key>
+          <Name>(1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0)(1012=-1,-1,-1,-1,0)</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
+          <Key>ARMDBGFLAGS</Key>
+          <Name></Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
+          <Key>DLGUARM</Key>
+          <Name>(105=-1,-1,-1,-1,0)</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
           <Key>UL2CM3</Key>
           <Name>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0STM32F2xx_1024 -FS08000000 -FL020000 -FP0($$Device:STM32F205RB$CMSIS\Flash\STM32F2xx_1024.FLM))</Name>
         </SetRegEntry>
@@ -143,6 +168,13 @@
         </SetRegEntry>
       </TargetDriverDllRegistry>
       <Breakpoint/>
+      <WatchWindow1>
+        <Ww>
+          <count>0</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>ADC_value</ItemText>
+        </Ww>
+      </WatchWindow1>
       <Tracepoint>
         <THDelay>0</THDelay>
       </Tracepoint>
@@ -154,7 +186,7 @@
         <aSer1>0</aSer1>
         <aSer2>0</aSer2>
         <aPa>0</aPa>
-        <viewmode>0</viewmode>
+        <viewmode>1</viewmode>
         <vrSel>0</vrSel>
         <aSym>0</aSym>
         <aTbox>0</aTbox>
@@ -166,7 +198,7 @@
         <aLa>0</aLa>
         <aPa1>0</aPa1>
         <AscS4>0</AscS4>
-        <aSer4>0</aSer4>
+        <aSer4>1</aSer4>
         <StkLoc>0</StkLoc>
         <TrcWin>0</TrcWin>
         <newCpu>0</newCpu>
@@ -175,6 +207,12 @@
       <LintExecutable></LintExecutable>
       <LintConfigFile></LintConfigFile>
       <bLintAuto>0</bLintAuto>
+      <SystemViewers>
+        <Entry>
+          <Name>System Viewer\ADC1</Name>
+          <WinId>35905</WinId>
+        </Entry>
+      </SystemViewers>
     </TargetOption>
   </Target>
 
