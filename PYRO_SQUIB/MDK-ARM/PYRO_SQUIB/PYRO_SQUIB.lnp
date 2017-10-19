@@ -43,6 +43,7 @@
 "pyro_squib\stm32f2xx_hal_tim_ex.o"
 "pyro_squib\stm32f2xx_hal_tim.o"
 "pyro_squib\stm32f2xx_hal_adc_ex.o"
+"pyro_squib\stm32f2xx_hal_iwdg.o"
 "pyro_squib\cmsis_os.o"
 "pyro_squib\event_groups.o"
 "pyro_squib\tasks.o"

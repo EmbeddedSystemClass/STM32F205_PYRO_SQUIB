@@ -28,6 +28,8 @@ extern enPyroSquibError			PyroSquibError;
 extern uint8_t pyroSquibStatus;
 extern SemaphoreHandle_t xPyroSquib_Semaphore;
 
+extern IWDG_HandleTypeDef hiwdg;
+
 #define REG_INPUT_START     1000
 #define REG_INPUT_NREGS     20
 
@@ -62,6 +64,8 @@ eMBRegInputCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs )
     int iRegIndex;
 		float tempADCvalue;
 
+		HAL_IWDG_Refresh(&hiwdg);
+	
     if ( ( usAddress >= REG_INPUT_START ) &&
          ( usAddress + usNRegs <= REG_INPUT_START + REG_INPUT_NREGS ) )
     {

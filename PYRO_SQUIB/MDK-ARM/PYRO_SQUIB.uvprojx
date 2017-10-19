@@ -15,7 +15,7 @@
         <TargetCommonOption>
           <Device>STM32F205RB</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F2xx_DFP.2.7.0</PackID>
+          <PackID>Keil.STM32F2xx_DFP.2.6.0</PackID>
           <PackURL>http://www.keil.com/pack</PackURL>
           <Cpu>IRAM(0x20000000-0x2000FFFF) IROM(0x8000000-0x801FFFF) CLOCK(25000000) CPUTYPE("Cortex-M3")</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -373,7 +373,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F205xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;../Drivers/STM32F2xx_HAL_Driver/Inc;../Drivers/STM32F2xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F2xx/Include;../Drivers/CMSIS/Include;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;..\modbus\include;..\modbus\rtu;..\modbus\port</IncludePath>
+              <IncludePath>../Inc; ../Drivers/STM32F2xx_HAL_Driver/Inc; ../Drivers/STM32F2xx_HAL_Driver/Inc/Legacy; ../Drivers/CMSIS/Device/ST/STM32F2xx/Include; ../Drivers/CMSIS/Include; ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3; ../Middlewares/Third_Party/FreeRTOS/Source/include; ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS; ..\modbus\include; ..\modbus\rtu; ..\modbus\port</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -707,6 +707,11 @@
               <FileName>stm32f2xx_hal_adc_ex.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_adc_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f2xx_hal_iwdg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_iwdg.c</FilePath>
             </File>
           </Files>
         </Group>
