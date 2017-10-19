@@ -37,7 +37,10 @@
 #include "cmsis_os.h"
 
 /* USER CODE BEGIN 0 */
-
+#include "mbport.h"
+#include "adc.h"
+#include "pyro_squib.h"
+BOOL UART_IRQ_Handler(USART_TypeDef * usart) ;
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
@@ -199,6 +202,16 @@ void USART1_IRQHandler(void)
 {
   /* USER CODE BEGIN USART1_IRQn 0 */
 
+	// Если прерывание от передачи, то обработаем стандартным способом, т.к. даже при DMA обмене, используется
+	// однократный вызов прерывания на последний байт!
+	// Если прерывание на прием, то вызываем спец. функцию сброса таймера приема, а штатный механизм 
+	// не используется (не взводится при настройке приема по DMA)
+  if(!((((__HAL_UART_GET_FLAG(&huart1, UART_FLAG_TXE)) != RESET) && ((__HAL_UART_GET_IT_SOURCE(&huart1, UART_IT_TXE)) != RESET)) ||
+		(((__HAL_UART_GET_FLAG(&huart1, UART_FLAG_TC)) != RESET) && ((__HAL_UART_GET_IT_SOURCE(&huart1, UART_IT_TC)) != RESET)) ))  
+	{
+		xMBRTUReceiveFSM();
+		return;
+	}
   /* USER CODE END USART1_IRQn 0 */
   HAL_UART_IRQHandler(&huart1);
   /* USER CODE BEGIN USART1_IRQn 1 */
@@ -249,6 +262,23 @@ void DMA2_Stream7_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
-
+void HAL_TIM_PeriodElapsedCallback ( TIM_HandleTypeDef * htimer)
+{
+	switch((uint32_t)(htimer->Instance))
+	{
+		case (uint32_t)TIM4:
+		{
+			xMBPort_TimerExpired();		
+		}
+		break;
+		
+		case (uint32_t)TIM2:
+		{
+			PyroSquib_TimerExpired();
+		}
+		break;
+		
+	}
+}
 /* USER CODE END 1 */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
