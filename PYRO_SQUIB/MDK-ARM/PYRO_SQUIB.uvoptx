@@ -81,16 +81,21 @@
       <Books>
         <Book>
           <Number>0</Number>
-          <Title>Schematics (MCBSTM32F200)</Title>
-          <Path>D:\Programs\Keil\ARM\PACK\Keil\STM32F2xx_DFP\2.6.0\MDK\Boards\Keil\MCBSTM32F200\Documentation\mcbstm32f200-schematics.pdf</Path>
+          <Title>Schematics V1.1 (MCBSTM32F200)</Title>
+          <Path>C:\Program Files\Keil\ARM\PACK\Keil\STM32F2xx_DFP\2.7.0\MDK\Boards\Keil\MCBSTM32F200\Documentation\mcbstm32f200-schematics.pdf</Path>
         </Book>
         <Book>
           <Number>1</Number>
-          <Title>User Manual (MCBSTM32F200)</Title>
-          <Path>D:\Programs\Keil\ARM\PACK\Keil\STM32F2xx_DFP\2.6.0\MDK\Boards\Keil\MCBSTM32F200\Documentation\mcbstm32f200.chm</Path>
+          <Title>Schematics V1.2 (MCBSTM32F200)</Title>
+          <Path>C:\Program Files\Keil\ARM\PACK\Keil\STM32F2xx_DFP\2.7.0\MDK\Boards\Keil\MCBSTM32F200\Documentation\mcbstm32f200-schematics_V1.2.pdf</Path>
         </Book>
         <Book>
           <Number>2</Number>
+          <Title>User Manual (MCBSTM32F200)</Title>
+          <Path>C:\Program Files\Keil\ARM\PACK\Keil\STM32F2xx_DFP\2.7.0\MDK\Boards\Keil\MCBSTM32F200\Documentation\mcbstm32f200.chm</Path>
+        </Book>
+        <Book>
+          <Number>3</Number>
           <Title>MCBSTM32F200 Evaluation Board Web Page (MCBSTM32F200)</Title>
           <Path>http://www.keil.com/mcbstm32f200/</Path>
         </Book>
@@ -176,7 +181,7 @@
       <DebugFlag>
         <trace>0</trace>
         <periodic>1</periodic>
-        <aLwin>0</aLwin>
+        <aLwin>1</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
         <aSer2>0</aSer2>
@@ -206,6 +211,14 @@
         <Entry>
           <Name>System Viewer\ADC1</Name>
           <WinId>35905</WinId>
+        </Entry>
+        <Entry>
+          <Name>System Viewer\I2C2</Name>
+          <WinId>35904</WinId>
+        </Entry>
+        <Entry>
+          <Name>System Viewer\USART1</Name>
+          <WinId>35903</WinId>
         </Entry>
       </SystemViewers>
     </TargetOption>
@@ -581,7 +594,7 @@
 
   <Group>
     <GroupName>Drivers/STM32F2xx_HAL_Driver</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -721,7 +734,7 @@
       <GroupNumber>5</GroupNumber>
       <FileNumber>40</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>../Drivers/STM32F2xx_HAL_Driver/Src/stm32f2xx_hal_i2c.c</PathWithFileName>

@@ -198,10 +198,11 @@ static void PyroSquib_Task(void *pvParameters)
 				if(xSemaphoreTake( xPyroSquib_Semaphore, PYRO_SQUIB_WAIT_START_SEMAPHORE )== pdTRUE)
 				{
 						PyroSquibError=PyroSquib_Start();
-						PyroSquibError=PyroSquib_SetCurrent_All(PYRO_SQUIB_CURRENT_TEST);
+//						PyroSquibError=PyroSquib_SetCurrent_All(PYRO_SQUIB_CURRENT_TEST);
 				}
 				else
 				{
+						PyroSquibError=PyroSquib_SetCurrent_All(PYRO_SQUIB_CURRENT_TEST);	
 						pyroSquibStatus=PyroSquib_Test();
 				}
 		}
