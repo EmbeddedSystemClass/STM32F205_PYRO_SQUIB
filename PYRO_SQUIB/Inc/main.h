@@ -90,7 +90,7 @@
 #define PIR_EN1_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
-
+#define SCL_SDA_AKT_GPIO_Port GPIOB
 /* USER CODE END Private defines */
 
 void _Error_Handler(char *, int);
